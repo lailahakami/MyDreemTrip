@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		117514DD2779BB6800677198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514DC2779BB6800677198 /* AppDelegate.swift */; };
+		117514DF2779BB6800677198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514DE2779BB6800677198 /* SceneDelegate.swift */; };
+		117514E12779BB6800677198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514E02779BB6800677198 /* ViewController.swift */; };
+		117514E42779BB6800677198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117514E22779BB6800677198 /* Main.storyboard */; };
+		117514E62779BB6C00677198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117514E52779BB6C00677198 /* Assets.xcassets */; };
+		117514E92779BB6C00677198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117514E72779BB6C00677198 /* LaunchScreen.storyboard */; };
+		117514F42779BB6C00677198 /* MyDreemTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514F32779BB6C00677198 /* MyDreemTripTests.swift */; };
+		117514FE2779BB6C00677198 /* MyDreemTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514FD2779BB6C00677198 /* MyDreemTripUITests.swift */; };
+		117515002779BB6C00677198 /* MyDreemTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514FF2779BB6C00677198 /* MyDreemTripUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		117514F02779BB6C00677198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117514D12779BB6800677198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117514D82779BB6800677198;
+			remoteInfo = MyDreemTrip;
+		};
+		117514FA2779BB6C00677198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117514D12779BB6800677198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117514D82779BB6800677198;
+			remoteInfo = MyDreemTrip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		117514D92779BB6800677198 /* MyDreemTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDreemTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		117514DC2779BB6800677198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		117514DE2779BB6800677198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		117514E02779BB6800677198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		117514E32779BB6800677198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		117514E52779BB6C00677198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		117514E82779BB6C00677198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		117514EA2779BB6C00677198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117514EF2779BB6C00677198 /* MyDreemTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDreemTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117514F32779BB6C00677198 /* MyDreemTripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDreemTripTests.swift; sourceTree = "<group>"; };
+		117514F92779BB6C00677198 /* MyDreemTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDreemTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117514FD2779BB6C00677198 /* MyDreemTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDreemTripUITests.swift; sourceTree = "<group>"; };
+		117514FF2779BB6C00677198 /* MyDreemTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDreemTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117514D62779BB6800677198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514EC2779BB6C00677198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514F62779BB6C00677198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		117514D02779BB6800677198 = {
+			isa = PBXGroup;
+			children = (
+				117514DB2779BB6800677198 /* MyDreemTrip */,
+				117514F22779BB6C00677198 /* MyDreemTripTests */,
+				117514FC2779BB6C00677198 /* MyDreemTripUITests */,
+				117514DA2779BB6800677198 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		117514DA2779BB6800677198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				117514D92779BB6800677198 /* MyDreemTrip.app */,
+				117514EF2779BB6C00677198 /* MyDreemTripTests.xctest */,
+				117514F92779BB6C00677198 /* MyDreemTripUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		117514DB2779BB6800677198 /* MyDreemTrip */ = {
+			isa = PBXGroup;
+			children = (
+				117514DC2779BB6800677198 /* AppDelegate.swift */,
+				117514DE2779BB6800677198 /* SceneDelegate.swift */,
+				117514E02779BB6800677198 /* ViewController.swift */,
+				117514E22779BB6800677198 /* Main.storyboard */,
+				117514E52779BB6C00677198 /* Assets.xcassets */,
+				117514E72779BB6C00677198 /* LaunchScreen.storyboard */,
+				117514EA2779BB6C00677198 /* Info.plist */,
+			);
+			path = MyDreemTrip;
+			sourceTree = "<group>";
+		};
+		117514F22779BB6C00677198 /* MyDreemTripTests */ = {
+			isa = PBXGroup;
+			children = (
+				117514F32779BB6C00677198 /* MyDreemTripTests.swift */,
+			);
+			path = MyDreemTripTests;
+			sourceTree = "<group>";
+		};
+		117514FC2779BB6C00677198 /* MyDreemTripUITests */ = {
+			isa = PBXGroup;
+			children = (
+				117514FD2779BB6C00677198 /* MyDreemTripUITests.swift */,
+				117514FF2779BB6C00677198 /* MyDreemTripUITestsLaunchTests.swift */,
+			);
+			path = MyDreemTripUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		117514D82779BB6800677198 /* MyDreemTrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117515032779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTrip" */;
+			buildPhases = (
+				117514D52779BB6800677198 /* Sources */,
+				117514D62779BB6800677198 /* Frameworks */,
+				117514D72779BB6800677198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDreemTrip;
+			productName = MyDreemTrip;
+			productReference = 117514D92779BB6800677198 /* MyDreemTrip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		117514EE2779BB6C00677198 /* MyDreemTripTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117515062779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTripTests" */;
+			buildPhases = (
+				117514EB2779BB6C00677198 /* Sources */,
+				117514EC2779BB6C00677198 /* Frameworks */,
+				117514ED2779BB6C00677198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117514F12779BB6C00677198 /* PBXTargetDependency */,
+			);
+			name = MyDreemTripTests;
+			productName = MyDreemTripTests;
+			productReference = 117514EF2779BB6C00677198 /* MyDreemTripTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		117514F82779BB6C00677198 /* MyDreemTripUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117515092779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTripUITests" */;
+			buildPhases = (
+				117514F52779BB6C00677198 /* Sources */,
+				117514F62779BB6C00677198 /* Frameworks */,
+				117514F72779BB6C00677198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117514FB2779BB6C00677198 /* PBXTargetDependency */,
+			);
+			name = MyDreemTripUITests;
+			productName = MyDreemTripUITests;
+			productReference = 117514F92779BB6C00677198 /* MyDreemTripUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		117514D12779BB6800677198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					117514D82779BB6800677198 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					117514EE2779BB6C00677198 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 117514D82779BB6800677198;
+					};
+					117514F82779BB6C00677198 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 117514D82779BB6800677198;
+					};
+				};
+			};
+			buildConfigurationList = 117514D42779BB6800677198 /* Build configuration list for PBXProject "MyDreemTrip" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 117514D02779BB6800677198;
+			productRefGroup = 117514DA2779BB6800677198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				117514D82779BB6800677198 /* MyDreemTrip */,
+				117514EE2779BB6C00677198 /* MyDreemTripTests */,
+				117514F82779BB6C00677198 /* MyDreemTripUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		117514D72779BB6800677198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117514E92779BB6C00677198 /* LaunchScreen.storyboard in Resources */,
+				117514E62779BB6C00677198 /* Assets.xcassets in Resources */,
+				117514E42779BB6800677198 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514ED2779BB6C00677198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514F72779BB6C00677198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117514D52779BB6800677198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117514E12779BB6800677198 /* ViewController.swift in Sources */,
+				117514DD2779BB6800677198 /* AppDelegate.swift in Sources */,
+				117514DF2779BB6800677198 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514EB2779BB6C00677198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117514F42779BB6C00677198 /* MyDreemTripTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117514F52779BB6C00677198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117514FE2779BB6C00677198 /* MyDreemTripUITests.swift in Sources */,
+				117515002779BB6C00677198 /* MyDreemTripUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		117514F12779BB6C00677198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117514D82779BB6800677198 /* MyDreemTrip */;
+			targetProxy = 117514F02779BB6C00677198 /* PBXContainerItemProxy */;
+		};
+		117514FB2779BB6C00677198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117514D82779BB6800677198 /* MyDreemTrip */;
+			targetProxy = 117514FA2779BB6C00677198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		117514E22779BB6800677198 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117514E32779BB6800677198 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		117514E72779BB6C00677198 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117514E82779BB6C00677198 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		117515012779BB6C00677198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		117515022779BB6C00677198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		117515042779BB6C00677198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDreemTrip/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		117515052779BB6C00677198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDreemTrip/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		117515072779BB6C00677198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDreemTrip.app/MyDreemTrip";
+			};
+			name = Debug;
+		};
+		117515082779BB6C00677198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDreemTrip.app/MyDreemTrip";
+			};
+			name = Release;
+		};
+		1175150A2779BB6C00677198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDreemTrip;
+			};
+			name = Debug;
+		};
+		1175150B2779BB6C00677198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULBSA6XW4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = layla.MyDreemTripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDreemTrip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117514D42779BB6800677198 /* Build configuration list for PBXProject "MyDreemTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117515012779BB6C00677198 /* Debug */,
+				117515022779BB6C00677198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117515032779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117515042779BB6C00677198 /* Debug */,
+				117515052779BB6C00677198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117515062779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTripTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117515072779BB6C00677198 /* Debug */,
+				117515082779BB6C00677198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117515092779BB6C00677198 /* Build configuration list for PBXNativeTarget "MyDreemTripUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1175150A2779BB6C00677198 /* Debug */,
+				1175150B2779BB6C00677198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 117514D12779BB6800677198 /* Project object */;
+}
