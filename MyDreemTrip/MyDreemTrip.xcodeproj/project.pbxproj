@@ -13,6 +13,13 @@
 		1107E1262779DD3900579466 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1107E1252779DD3900579466 /* FirebaseStorage */; };
 		1107E1282779E07C00579466 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1107E1272779E07C00579466 /* .gitignore */; };
 		1107E12A2779E08D00579466 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1107E1292779E08D00579466 /* README.md */; };
+		1107E12D2779E8CC00579466 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1107E12F2779E8CC00579466 /* Localization.strings */; };
+		1107E133277A50CE00579466 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E132277A50CE00579466 /* DetailsViewController.swift */; };
+		1107E135277AECF500579466 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E134277AECF500579466 /* AddPostViewController.swift */; };
+		1107E137277AEF9600579466 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E136277AEF9600579466 /* Activity.swift */; };
+		1107E139277AEFCB00579466 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E138277AEFCB00579466 /* ImageView.swift */; };
+		11171FB8277B38EF00AC9DCE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11171FB6277B38EF00AC9DCE /* PostCell.swift */; };
+		11171FB9277B38EF00AC9DCE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11171FB7277B38EF00AC9DCE /* PostCell.xib */; };
 		117514DD2779BB6800677198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514DC2779BB6800677198 /* AppDelegate.swift */; };
 		117514DF2779BB6800677198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117514DE2779BB6800677198 /* SceneDelegate.swift */; };
 		117514E42779BB6800677198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117514E22779BB6800677198 /* Main.storyboard */; };
@@ -50,6 +57,15 @@
 		1107E11E2779D89300579466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1107E1272779E07C00579466 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		1107E1292779E08D00579466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1107E12E2779E8CC00579466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
+		1107E1302779E8F000579466 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localization.strings; sourceTree = "<group>"; };
+		1107E1312779E8F200579466 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localization.strings; sourceTree = "<group>"; };
+		1107E132277A50CE00579466 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		1107E134277AECF500579466 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		1107E136277AEF9600579466 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		1107E138277AEFCB00579466 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		11171FB6277B38EF00AC9DCE /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		11171FB7277B38EF00AC9DCE /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		117514D92779BB6800677198 /* MyDreemTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDreemTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117514DC2779BB6800677198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117514DE2779BB6800677198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,14 +118,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1107E13A277AF04A00579466 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				1107E136277AEF9600579466 /* Activity.swift */,
+				1107E138277AEFCB00579466 /* ImageView.swift */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
 		117514D02779BB6800677198 = {
 			isa = PBXGroup;
 			children = (
+				117514F22779BB6C00677198 /* MyDreemTripTests */,
+				117514DB2779BB6800677198 /* MyDreemTrip */,
 				1107E1272779E07C00579466 /* .gitignore */,
 				1107E1292779E08D00579466 /* README.md */,
-				117514DB2779BB6800677198 /* MyDreemTrip */,
+				1107E13A277AF04A00579466 /* Utill */,
+				118EFD152779CFB700BDAD89 /* Model */,
+				118EFD1F2779D22900BDAD89 /* View */,
+				118EFD1E2779D1E800BDAD89 /* Controller */,
+				1107E12F2779E8CC00579466 /* Localization.strings */,
+				117514EA2779BB6C00677198 /* Info.plist */,
 				1107E11E2779D89300579466 /* GoogleService-Info.plist */,
-				117514F22779BB6C00677198 /* MyDreemTripTests */,
 				117514FC2779BB6C00677198 /* MyDreemTripUITests */,
 				117514DA2779BB6800677198 /* Products */,
 			);
@@ -130,12 +161,8 @@
 			children = (
 				117514DC2779BB6800677198 /* AppDelegate.swift */,
 				117514DE2779BB6800677198 /* SceneDelegate.swift */,
-				118EFD152779CFB700BDAD89 /* Model */,
-				118EFD1E2779D1E800BDAD89 /* Controller */,
-				118EFD1F2779D22900BDAD89 /* View */,
-				117514E52779BB6C00677198 /* Assets.xcassets */,
 				117514E72779BB6C00677198 /* LaunchScreen.storyboard */,
-				117514EA2779BB6C00677198 /* Info.plist */,
+				117514E52779BB6C00677198 /* Assets.xcassets */,
 			);
 			path = MyDreemTrip;
 			sourceTree = "<group>";
@@ -171,8 +198,12 @@
 			children = (
 				118EFD182779D15500BDAD89 /* LoginViewController.swift */,
 				118EFD162779D13B00BDAD89 /* RegisterViewController.swift */,
+				1107E134277AECF500579466 /* AddPostViewController.swift */,
 				118EFD1C2779D1D000BDAD89 /* LandingViewController.swift */,
 				118EFD1A2779D17200BDAD89 /* HomeViewController.swift */,
+				11171FB6277B38EF00AC9DCE /* PostCell.swift */,
+				11171FB7277B38EF00AC9DCE /* PostCell.xib */,
+				1107E132277A50CE00579466 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +332,8 @@
 			files = (
 				1107E12A2779E08D00579466 /* README.md in Resources */,
 				1107E1282779E07C00579466 /* .gitignore in Resources */,
+				1107E12D2779E8CC00579466 /* Localization.strings in Resources */,
+				11171FB9277B38EF00AC9DCE /* PostCell.xib in Resources */,
 				117514E92779BB6C00677198 /* LaunchScreen.storyboard in Resources */,
 				117514E62779BB6C00677198 /* Assets.xcassets in Resources */,
 				1107E11F2779D89300579466 /* GoogleService-Info.plist in Resources */,
@@ -329,13 +362,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1107E139277AEFCB00579466 /* ImageView.swift in Sources */,
 				118EFD192779D15500BDAD89 /* LoginViewController.swift in Sources */,
+				11171FB8277B38EF00AC9DCE /* PostCell.swift in Sources */,
 				117514DD2779BB6800677198 /* AppDelegate.swift in Sources */,
+				1107E133277A50CE00579466 /* DetailsViewController.swift in Sources */,
 				118EFD1D2779D1D000BDAD89 /* LandingViewController.swift in Sources */,
 				118EFD172779D13B00BDAD89 /* RegisterViewController.swift in Sources */,
 				117514DF2779BB6800677198 /* SceneDelegate.swift in Sources */,
+				1107E135277AECF500579466 /* AddPostViewController.swift in Sources */,
 				118EFD142779CF7D00BDAD89 /* apartment.swift in Sources */,
 				118EFD1B2779D17200BDAD89 /* HomeViewController.swift in Sources */,
+				1107E137277AEF9600579466 /* Activity.swift in Sources */,
 				118EFD122779CEFE00BDAD89 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +411,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1107E12F2779E8CC00579466 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1107E12E2779E8CC00579466 /* en */,
+				1107E1302779E8F000579466 /* ar */,
+				1107E1312779E8F200579466 /* fr */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
 		117514E22779BB6800677198 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -523,7 +571,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ULBSA6XW4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDreemTrip/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -551,7 +599,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ULBSA6XW4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDreemTrip/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
