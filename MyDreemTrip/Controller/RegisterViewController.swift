@@ -56,10 +56,13 @@ class RegisterViewController: UIViewController {
            let name = nameTextField.text,
            let email = emailTextField.text,
            let password = passwordTextField.text,
-          let phonNumber = phoneNumberTextFiled.text,
            
             
             
+            
+            
+           let phonNumber = phoneNumberTextFiled.text,
+
            let confirmPassword = confirmPasswordTextField.text,
            
            
@@ -67,6 +70,8 @@ class RegisterViewController: UIViewController {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error {
+                    Alert.showAlert(strTitle: "Error", strMessage: error.localizedDescription, viewController: self)
+                                                Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                     print("Registration Auth Error",error.localizedDescription)
                 }
                 if let authResult = authResult {
@@ -75,17 +80,22 @@ class RegisterViewController: UIViewController {
                     uploadMeta.contentType = "image/jpeg"
                     storageRef.putData(imageData, metadata: uploadMeta) { storageMeta, error in
                         if let error = error {
+                            Alert.showAlert(strTitle: "Error", strMessage: error.localizedDescription, viewController: self)
+                                                        Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                             print("Registration Storage Error",error.localizedDescription)
                         }
                         storageRef.downloadURL { url, error in
                             if let error = error {
+                                Alert.showAlert(strTitle: "Error", strMessage: error.localizedDescription, viewController: self)
+                                                            Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                                 print("Registration Storage Download Url Error",error.localizedDescription)
                             }
                             if let url = url {
                                 print("URL",url.absoluteString)
                                 let db = Firestore.firestore()
                                 let userData: [String:String] = [
-                                    "id":authResult.user.uid,
+                                 
+                                    "userId":authResult.user.uid,
                                     "name":name,
                                     "email":email,
                                     "imageUrl":url.absoluteString

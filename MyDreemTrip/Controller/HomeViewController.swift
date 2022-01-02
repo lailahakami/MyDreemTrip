@@ -1,9 +1,3 @@
-//
-//  HomeViewController.swift
-//  MyDreemTrip
-//
-//  Created by layla hakami on 23/05/1443 AH.
-//
 
 import UIKit
 import Firebase
@@ -14,24 +8,22 @@ class HomeViewController: UIViewController {
     var selectedPost:Aperment?
     var selectedPostImage:UIImage?
     
-    
-    @IBOutlet weak var postsTableView: UITableView!
-    
-    {
-        didSet {
    
-            
-            
-            
-           postsTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+    
+    @IBOutlet weak var postsCollectionView: UICollectionView!
+    
+   {
+        didSet {
+        postsCollectionView.delegate = self
+        postsCollectionView.dataSource = self
+//            postsCollectionView.backgroundColor = .systemFill
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         getPosts()
-        // Do any additional setup after loading the view.
     }
-    
+
     func getPosts() {
         let ref = Firestore.firestore()
         ref.collection("posts").order(by: "createdAt",descending: true).addSnapshotListener { snapshot, error in
@@ -49,60 +41,53 @@ class HomeViewController: UIViewController {
                             ref.collection("users").document(userId).getDocument { userSnapshot, error in
                                 if let error = error {
                                     print("ERROR user Data",error.localizedDescription)
-                                    
                                 }
                                 if let userSnapshot = userSnapshot,
                                    let userData = userSnapshot.data(){
                                     let user = User(dict:userData)
                                     let post = Aperment(dict:postData,id:diff.document.documentID,user:user)
-                                    self.postsTableView.beginUpdates()
-                                    if snapshot.documentChanges.count != 1 {
-                                        self.posts.append(post)
-                                      
-                                        self.postsTableView.insertRows(at: [IndexPath(row:self.posts.count - 1,section: 0)],with: .automatic)
-                                    }else {
-                                        self.posts.insert(post,at:0)
-                                      
-                                        self.postsTableView.insertRows(at: [IndexPath(row: 0,section: 0)],with: .automatic)
+                                      self.posts.insert(post,at:0)
+                                    DispatchQueue.main.async {
+                                        self.postsCollectionView.reloadData()
                                     }
-                                  
-                                    self.postsTableView.endUpdates()
-                                    
-                                    
-                                }
+
+                                        }
+
                             }
-                        }
+                                }
+                            
+                        
                     case .modified:
                         let postId = diff.document.documentID
                         if let currentPost = self.posts.first(where: {$0.id == postId}),
                            let updateIndex = self.posts.firstIndex(where: {$0.id == postId}){
                             let newPost = Aperment(dict:postData, id: postId, user: currentPost.user)
                             self.posts[updateIndex] = newPost
-                         
-                                self.postsTableView.beginUpdates()
-                                self.postsTableView.deleteRows(at: [IndexPath(row: updateIndex,section: 0)], with: .left)
-                                self.postsTableView.insertRows(at: [IndexPath(row: updateIndex,section: 0)],with: .left)
-                                self.postsTableView.endUpdates()
+                            DispatchQueue.main.async {
+                                self.postsCollectionView.reloadData()
+                            }
                             
-                        }
+
+                    }
                     case .removed:
                         let postId = diff.document.documentID
                         if let deleteIndex = self.posts.firstIndex(where: {$0.id == postId}){
                             self.posts.remove(at: deleteIndex)
-                          
-                                self.postsTableView.beginUpdates()
-                                self.postsTableView.deleteRows(at: [IndexPath(row: deleteIndex,section: 0)], with: .automatic)
-                                self.postsTableView.endUpdates()
-                            
+                            DispatchQueue.main.async {
+                                self.postsCollectionView.reloadData()
+                            }
+//                                self.packagesCollectionView.beginUpdates()
+//                            self.postsCollectionView.deleteItems(at: [IndexPath(item: deleteIndex, section: 0)])
+//                            self.packagesCollectionView.endUpdates()
+                        
                         }
-                    }
-                }
             }
         }
     }
+        }
+            }
     
-    
-    
+     
     @IBAction func handleLogout(_ sender: Any) {
             do {
         try Auth.auth().signOut()
@@ -129,37 +114,56 @@ vc.selectedPostImage = selectedPostImage
     }
     
 }
-
 }
-    extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+
+
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCell
+        cell.backgroundColor = .systemFill
         return cell.configure(with: posts[indexPath.row])
+        
+        
+
+    }
+        
+        
     }
     
+extension HomeViewController: UICollectionViewDelegate {
     
-}
-    
-extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, sizeForItemAT indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width * 0.493, height: self.view.frame.width * 0.45)
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! PostCell
-        selectedPostImage = cell.postImageView.image
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.1
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, insetForSrctionAt section: Int) -> UIEdgeInsets{
+        return UIEdgeInsets(top: 1, left: 2, bottom: 1, right: 2)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PostCell
+        selectedPostImage = cell.imageCollectionView.image
         selectedPost = posts[indexPath.row]
         if let currentUser = Auth.auth().currentUser,
            currentUser.uid == posts[indexPath.row].user.id{
             performSegue(withIdentifier: "toPostVC", sender: self)
         }else {
             performSegue(withIdentifier: "toDetailsVC", sender: self)
-            
         }
     }
 }
+
+
+
+    
 
 

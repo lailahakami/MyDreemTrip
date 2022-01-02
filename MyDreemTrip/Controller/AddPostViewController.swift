@@ -22,6 +22,9 @@ class AddPostViewController: UIViewController {
     @IBOutlet weak var postTitleTextField: UITextField!
     @IBOutlet weak var postDescriptionTextField: UITextField!
     
+    
+    
+    
     let activityIndicator = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,6 @@ class AddPostViewController: UIViewController {
                 }else {
                   
                     let storageRef = Storage.storage().reference(withPath: "posts/\(selectedPost.user.id)/\(selectedPost.id)")
-                
                     storageRef.delete { error in
                         if let error = error {
                             print("Error in storage delete",error)
@@ -69,6 +71,8 @@ class AddPostViewController: UIViewController {
             if let image = postImageView.image,
            let imageData = image.jpegData(compressionQuality: 0.75),
            let title = postTitleTextField.text,
+               let price = postPriceTextField.text,
+
            let description = postDescriptionTextField.text,
            let currentUser = Auth.auth().currentUser {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
@@ -94,6 +98,7 @@ class AddPostViewController: UIViewController {
                             postData = [
                                 "userId":selectedPost.user.id,
                                 "title":title,
+                                "price":price,
                                 "description":description,
                                 "imageUrl":url.absoluteString,
                                 "createdAt":selectedPost.createdAt ?? FieldValue.serverTimestamp(),
@@ -104,6 +109,7 @@ class AddPostViewController: UIViewController {
                                 "userId":currentUser.uid,
                                 "title":title,
                                 "description":description,
+                                "price":price,
                                 "imageUrl":url.absoluteString,
                                 "createdAt":FieldValue.serverTimestamp(),
                                 "updatedAt": FieldValue.serverTimestamp()
@@ -113,8 +119,8 @@ class AddPostViewController: UIViewController {
                             if let error = error {
                                 print("FireStore Error",error.localizedDescription)
                             }
-//                            Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
-//                            self.navigationController?.popViewController(animated: true)
+                           Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
+                           self.navigationController?.popViewController(animated: true)
                             if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController {
                                 vc.modalPresentationStyle = .fullScreen
                                 Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)

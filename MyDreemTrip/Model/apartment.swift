@@ -1,10 +1,3 @@
-//
-//  apartment.swift
-//  MyDreemTrip
-//
-//  Created by layla hakami on 23/05/1443 AH.
-//
-
 import Foundation
 import Firebase
 struct Aperment {
@@ -12,14 +5,17 @@ struct Aperment {
     var title = ""
     var description = ""
     var imageUrl = ""
+    var price = ""
     var user:User
     var createdAt:Timestamp?
     
     init(dict:[String:Any],id:String,user:User) {
-        if let title = dict["title"] as? String,
+                if let title = dict["title"] as? String,
            let description = dict["description"] as? String,
            let imageUrl = dict["imageUrl"] as? String,
+           let price = dict["price"] as? String,
             let createdAt = dict["createdAt"] as? Timestamp{
+            self.price = price
             self.title = title
             self.description = description
             self.imageUrl = imageUrl
