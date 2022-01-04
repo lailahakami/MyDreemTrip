@@ -5,6 +5,72 @@ class RegisterViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
     
     
+    @IBOutlet weak var registerLabel: UILabel!{
+        didSet{
+            registerLabel.text = "Register".localized
+        }
+    }
+    
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet{
+            nameLabel.text = "Name".localized
+        }
+    }
+    
+    @IBOutlet weak var idLabel: UILabel!{
+        didSet{
+            idLabel.text = "ID".localized
+            
+        }
+    }
+    
+    @IBOutlet weak var phoneNumberLabel: UILabel!{
+        didSet{
+            phoneNumberLabel.text = "phoneNumber".localized
+        }
+    }
+    
+    
+    @IBOutlet weak var emailLabel: UILabel!{
+        didSet{
+            emailLabel.text = "Email".localized
+        }
+    }
+    
+    @IBOutlet weak var passwordLabel: UILabel!{
+        didSet{
+            passwordLabel.text = "Password".localized
+        }
+    }
+    
+    @IBOutlet weak var confirmPassword: UILabel!{
+        didSet{
+            confirmPassword.text = "Password".localized
+        }
+    }
+    
+    @IBOutlet weak var Registerbutton: UIButton!{
+        didSet{
+            Registerbutton.setTitle(NSLocalizedString("Register", tableName: "Localizaple", comment: ""),for: .normal)
+        }
+    }
+    
+    @IBOutlet weak var orrLabel: UILabel!{
+        didSet{
+            orrLabel.text = "OR".localized
+        }
+    }
+    
+    
+    
+    
+    @IBOutlet weak var loginButtton: UIButton!{
+        didSet{
+            loginButtton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for: .normal)
+        }
+        
+    }
+    
     
     
     @IBOutlet weak var userImageView: UIImageView!
@@ -56,16 +122,9 @@ class RegisterViewController: UIViewController {
            let name = nameTextField.text,
            let email = emailTextField.text,
            let password = passwordTextField.text,
-           
-            
-            
-            
-            
            let phonNumber = phoneNumberTextFiled.text,
 
            let confirmPassword = confirmPasswordTextField.text,
-           
-           
            password == confirmPassword {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in

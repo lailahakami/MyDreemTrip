@@ -5,20 +5,52 @@ class LoginViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
     
     @IBOutlet weak var emailTextField: UITextField!
-    
-    
-    
+
     @IBOutlet weak var passwordTextField: UITextField!
     
-  
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBOutlet weak var emailLabel: UILabel! {
+        didSet{
+            emailLabel.text = "Email".localized
+        }
     }
     
-   
+    @IBOutlet weak var passwordLabel: UILabel!{
+        didSet{
+            passwordLabel.text = "Password".localized
+        }
+      
+    }
     
+    @IBOutlet weak var LoginLabel: UIButton!{
+        
+            didSet {
+                LoginLabel.setTitle(NSLocalizedString("Register", tableName: "Localizaple", comment: ""),for: .normal)
+    
+        }
+    
+        }
+    
+    
+    @IBOutlet weak var RegisterButton: UIButton!{
+        didSet {
+            RegisterButton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for: .normal)
+
+    }
+    }
+    
+    @IBOutlet weak var OrLabel: UILabel! {
+        didSet{
+            OrLabel.text = "OR".localized
+            
+        }
+    }
+    
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    
+        }
+        
     @IBAction func handleLogin(_ sender: Any) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {

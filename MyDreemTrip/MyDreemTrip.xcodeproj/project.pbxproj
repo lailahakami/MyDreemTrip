@@ -13,7 +13,7 @@
 		1107E1262779DD3900579466 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1107E1252779DD3900579466 /* FirebaseStorage */; };
 		1107E1282779E07C00579466 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1107E1272779E07C00579466 /* .gitignore */; };
 		1107E12A2779E08D00579466 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1107E1292779E08D00579466 /* README.md */; };
-		1107E12D2779E8CC00579466 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1107E12F2779E8CC00579466 /* Localization.strings */; };
+		1107E12D2779E8CC00579466 /* Localizaple.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1107E12F2779E8CC00579466 /* Localizaple.strings */; };
 		1107E133277A50CE00579466 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E132277A50CE00579466 /* DetailsViewController.swift */; };
 		1107E135277AECF500579466 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E134277AECF500579466 /* AddPostViewController.swift */; };
 		1107E137277AEF9600579466 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107E136277AEF9600579466 /* Activity.swift */; };
@@ -58,9 +58,8 @@
 		1107E11E2779D89300579466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1107E1272779E07C00579466 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		1107E1292779E08D00579466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		1107E12E2779E8CC00579466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		1107E1302779E8F000579466 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localization.strings; sourceTree = "<group>"; };
-		1107E1312779E8F200579466 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localization.strings; sourceTree = "<group>"; };
+		1107E12E2779E8CC00579466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizaple.strings; sourceTree = "<group>"; };
+		1107E1302779E8F000579466 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizaple.strings; sourceTree = "<group>"; };
 		1107E132277A50CE00579466 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		1107E134277AECF500579466 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		1107E136277AEF9600579466 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -82,8 +81,6 @@
 		118B069B277C942C0009E7BB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		118EFD0D2779CE9400BDAD89 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		118EFD0E2779CE9400BDAD89 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		118EFD0F2779CED300BDAD89 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		118EFD102779CED300BDAD89 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		118EFD112779CEFE00BDAD89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		118EFD132779CF7D00BDAD89 /* apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apartment.swift; sourceTree = "<group>"; };
 		118EFD162779D13B00BDAD89 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +137,7 @@
 				118EFD152779CFB700BDAD89 /* Model */,
 				118EFD1F2779D22900BDAD89 /* View */,
 				118EFD1E2779D1E800BDAD89 /* Controller */,
-				1107E12F2779E8CC00579466 /* Localization.strings */,
+				1107E12F2779E8CC00579466 /* Localizaple.strings */,
 				1177B254278188230070EF84 /* Bundle.swift */,
 				117514EA2779BB6C00677198 /* Info.plist */,
 				1107E11E2779D89300579466 /* GoogleService-Info.plist */,
@@ -311,7 +308,6 @@
 				en,
 				Base,
 				ar,
-				fr,
 			);
 			mainGroup = 117514D02779BB6800677198;
 			packageReferences = (
@@ -335,7 +331,7 @@
 			files = (
 				1107E12A2779E08D00579466 /* README.md in Resources */,
 				1107E1282779E07C00579466 /* .gitignore in Resources */,
-				1107E12D2779E8CC00579466 /* Localization.strings in Resources */,
+				1107E12D2779E8CC00579466 /* Localizaple.strings in Resources */,
 				117514E92779BB6C00677198 /* LaunchScreen.storyboard in Resources */,
 				117514E62779BB6C00677198 /* Assets.xcassets in Resources */,
 				1107E11F2779D89300579466 /* GoogleService-Info.plist in Resources */,
@@ -415,14 +411,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1107E12F2779E8CC00579466 /* Localization.strings */ = {
+		1107E12F2779E8CC00579466 /* Localizaple.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1107E12E2779E8CC00579466 /* en */,
 				1107E1302779E8F000579466 /* ar */,
-				1107E1312779E8F200579466 /* fr */,
 			);
-			name = Localization.strings;
+			name = Localizaple.strings;
 			sourceTree = "<group>";
 		};
 		117514E22779BB6800677198 /* Main.storyboard */ = {
@@ -430,7 +425,6 @@
 			children = (
 				117514E32779BB6800677198 /* Base */,
 				118EFD0D2779CE9400BDAD89 /* ar */,
-				118EFD0F2779CED300BDAD89 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -440,7 +434,6 @@
 			children = (
 				117514E82779BB6C00677198 /* Base */,
 				118EFD0E2779CE9400BDAD89 /* ar */,
-				118EFD102779CED300BDAD89 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

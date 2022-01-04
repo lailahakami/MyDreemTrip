@@ -12,9 +12,21 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var imageCollectionView: UIImageView!
     
     @IBOutlet weak var priceApartmentLabel: UILabel!
+    {
+        didSet{
+    priceApartmentLabel.text = "price".localized
+        }
+    }
     
     
     @IBOutlet weak var nameApartment: UILabel!
+    {
+        didSet{
+
+nameApartment.text = "NameApartment".localized
+        }
+    }
+     
     
     @IBOutlet weak var userImageView: UIImageView!
     

@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
 //            postsCollectionView.backgroundColor = .systemFill
         }
     }
+    
+   
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getPosts()

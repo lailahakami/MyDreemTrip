@@ -17,6 +17,41 @@ class AddPostViewController: UIViewController {
         }
     }
     
+    
+    @IBOutlet weak var priceLabel: UILabel!{
+    
+    
+    
+    didSet{
+            priceLabel.text = "price".localized
+        }
+    }
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!{
+        didSet{
+            titleLabel.text =  "Title".localized
+        }
+    }
+    
+    
+    @IBOutlet weak var descriptionLabel: UILabel!{
+        didSet{
+            descriptionLabel.text = "Description".localized
+            
+        }
+    }
+    
+    
+    @IBOutlet weak var addLabel: UIButton!{
+        didSet{
+
+            
+            addLabel.setTitle(NSLocalizedString("Add", tableName: "Localizaple", comment: ""),for: .normal)
+        }
+    }
+    
+    
     @IBOutlet weak var postPriceTextField: UITextField!
     
     @IBOutlet weak var postTitleTextField: UITextField!

@@ -1,9 +1,3 @@
-//
-//  Alert.swift
-//  MyDreemTrip
-//
-//  Created by layla hakami on 25/05/1443 AH.
-//
 
 import Foundation
 import UIKit

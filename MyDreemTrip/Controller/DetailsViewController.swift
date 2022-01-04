@@ -14,14 +14,8 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postPriceLabel: UILabel!
-    
     @IBOutlet weak var postTitleLabel: UILabel!
-    
-    
     @IBOutlet weak var postDescripionLabel: UILabel!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let selectedPost = selectedPost,
