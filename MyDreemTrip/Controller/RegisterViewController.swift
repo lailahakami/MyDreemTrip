@@ -66,17 +66,11 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var loginButtton: UIButton!{
         didSet{
-            loginButtton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for: .normal)
+            loginButtton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for:  .normal)
         }
         
     }
-    
-    
-    
-    @IBOutlet weak var userImageView: UIImageView!
-    
-    
-    {
+    @IBOutlet weak var userImageView: UIImageView!{
         didSet {
             userImageView.layer.borderColor = UIColor.systemGreen.cgColor
             userImageView.layer.borderWidth = 3.0
@@ -94,11 +88,19 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet{
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
     
     
     
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!{
+        didSet{
+            confirmPasswordTextField.isSecureTextEntry = true
+        }
+    }
     
 
     @IBOutlet weak var phoneNumberTextFiled: UITextField!
@@ -122,7 +124,7 @@ class RegisterViewController: UIViewController {
            let name = nameTextField.text,
            let email = emailTextField.text,
            let password = passwordTextField.text,
-           let phonNumber = phoneNumberTextFiled.text,
+//           let phonNumber = phoneNumberTextFiled.text,
 
            let confirmPassword = confirmPasswordTextField.text,
            password == confirmPassword {

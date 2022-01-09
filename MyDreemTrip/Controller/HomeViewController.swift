@@ -1,12 +1,17 @@
 
 import UIKit
 import Firebase
+import CoreMedia
 
 class HomeViewController: UIViewController {
     
     var posts = [Aperment]()
     var selectedPost:Aperment?
     var selectedPostImage:UIImage?
+    var filterdPost:[Aperment] = []
+    var selectedUserImage:UIImage?
+    let searchController = UISearchController(searchResultsController: nil)
+    
     
    
     
@@ -27,6 +32,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPosts()
+        
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        definesPresentationContext = true
+        searchController.searchResultsUpdater = self
+        
+
+        
     }
 
     func getPosts() {
@@ -111,29 +127,56 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let vc = segue.destination as! AddPostViewController
             vc.selectedPost = selectedPost
             vc.selectedPostImage = selectedPostImage
+            vc.selectedUserImage = selectedUserImage
         }else if identifier == "toDetailsVC" {
             let vc = segue.destination as! DetailsViewController
             vc.selectedPost = selectedPost
 vc.selectedPostImage = selectedPostImage
+            vc.selectedUserImage = selectedUserImage
+            
         }
     }
     
 }
 }
+extension HomeViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController : UISearchController) {
+        filterdPost = posts.filter({selectedPost in
+            return selectedPost.title.lowercased().contains(searchController.searchBar.text!.lowercased()) ||
+            selectedPost.description.lowercased().contains(searchController.searchBar.text!.lowercased()) ||
+            selectedPost.user.name.lowercased().contains(searchController.searchBar.text!.lowercased())
+        })
+        postsCollectionView.reloadData()
 
 
-
+    }
+}
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+//        return posts.count
+        return  searchController.isActive ?filterdPost.count : posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCell
-        cell.backgroundColor = .systemFill
+        let post = searchController.isActive ? filterdPost[indexPath.row] : posts[indexPath.row]
+                   
+        cell.backgroundColor = .systemBackground
+               print("...", posts[indexPath.row])
+               cell.layer.borderColor = UIColor.systemBackground.cgColor
+               cell.layer.borderWidth = 4.0
+               cell.layer.cornerRadius = 20
+               
+        return cell.configure(with: posts[indexPath.row])
+        
+        
+        
+        
+//        cell.backgroundColor = .systemFill
+        
         return cell.configure(with: posts[indexPath.row])
         
         
@@ -146,11 +189,20 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, sizeForItemAT indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width * 0.493, height: self.view.frame.width * 0.45)
+        return CGSize(width: self.view.frame.width * 0.495, height: self.view.frame.width * 0.45)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.1
     }
+    func collectionView(_collectionView: UICollectionView,layout colletionViewLayout: UICollectionViewLayout,minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+        
+        
+        
+        return 1
+    }
+
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionView, insetForSrctionAt section: Int) -> UIEdgeInsets{
         return UIEdgeInsets(top: 1, left: 2, bottom: 1, right: 2)
     }

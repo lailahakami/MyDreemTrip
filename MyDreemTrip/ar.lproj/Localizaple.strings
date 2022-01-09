@@ -11,8 +11,9 @@
 "Price" = " السعر" ;
 "Title" = "العنوان" ;
 "Description" = "الوصف" ;
-"Add" = "اضافه" ;
+
 "price" = "السعر" ;
 "NameApartment" = "اسم الشقه" ;
-
+"Update Post" = "تحديث" ;
+"Add Post" = "اضافه" ;
 

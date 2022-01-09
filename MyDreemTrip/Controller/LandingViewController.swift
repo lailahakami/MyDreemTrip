@@ -10,12 +10,15 @@ class LandingViewController: UIViewController {
                 switch lang {
                 case "ar":
                     segmentLanguge.selectedSegmentIndex = 0
+                    UIView.appearance().semanticContentAttribute = .forceRightToLeft
                 case "en":
                     segmentLanguge.selectedSegmentIndex = 1
+                    UIView.appearance().semanticContentAttribute = .forceLeftToRight
                 default:
                     let localLang =  Locale.current.languageCode
                      if localLang == "en" {
                          segmentLanguge.selectedSegmentIndex = 1
+                         
                      }else {
                          segmentLanguge.selectedSegmentIndex = 0
                      }

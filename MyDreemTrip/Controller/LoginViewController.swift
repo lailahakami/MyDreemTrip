@@ -4,9 +4,19 @@ import Firebase
 class LoginViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
     
+    
+    
+    @IBOutlet weak var viewLogin: UIView!
+    
+    
+    
     @IBOutlet weak var emailTextField: UITextField!
 
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet{
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
     
     @IBOutlet weak var emailLabel: UILabel! {
         didSet{
@@ -17,6 +27,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!{
         didSet{
             passwordLabel.text = "Password".localized
+            
         }
       
     }
@@ -47,6 +58,14 @@ class LoginViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            
+            viewLogin.layer.shadowColor = UIColor.gray.cgColor
+             viewLogin.layer.shadowOpacity = 1
+             viewLogin.layer.shadowOffset = .zero
+             viewLogin.layer.cornerRadius = 10
+             viewLogin.layer.shadowPath = UIBezierPath(rect: viewLogin.bounds).cgPath
+             viewLogin.layer.shouldRasterize = true
+             self.viewLogin.layer.cornerRadius = 10
         
     
         }
