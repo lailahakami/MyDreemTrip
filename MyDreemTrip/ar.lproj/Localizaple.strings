@@ -16,4 +16,10 @@
 "NameApartment" = "اسم الشقه" ;
 "Update Post" = "تحديث" ;
 "Add Post" = "اضافه" ;
-
+"You have an account ?" = "لديك حساب" ;
+"You don't have an account?" = "ليس لديك حساب" ;
+"Please enter your name" = "ادخل إسمك";
+"Please enter your email" = "البريد الإلكتروني";
+"Please enter your password" = "كلمة المرور";
+"Confirm password" = "تأكيد كلمة المرور";
+"Please enter your ID" = "رقم الهوية";

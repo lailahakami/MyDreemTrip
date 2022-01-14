@@ -67,8 +67,14 @@ class AddPostViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.delegate = self
+        postImageView.layer.shadowColor = UIColor.gray.cgColor
+//        postImageView.layer.shadowOpacity = 1
+        postImageView.layer.shadowOffset = .zero
+        postImageView.layer.cornerRadius = 10
+        postImageView.layer.shadowPath = UIBezierPath(rect: postImageView.bounds).cgPath
+        postImageView.layer.shouldRasterize = true
+         self.postImageView.layer.cornerRadius = 10
+       
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLLocationAccuracyHundredMeters

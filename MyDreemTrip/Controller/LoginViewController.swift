@@ -10,10 +10,15 @@ class LoginViewController: UIViewController {
     
     
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.placeholder = "Please enter your email".localized
+        }
+    }
 
     @IBOutlet weak var passwordTextField: UITextField!{
         didSet{
+            passwordTextField.placeholder = "Please enter your password".localized
             passwordTextField.isSecureTextEntry = true
         }
     }
@@ -44,14 +49,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var RegisterButton: UIButton!{
         didSet {
-            RegisterButton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for: .normal)
+            RegisterButton.setTitle(NSLocalizedString("Register", tableName: "Localizaple", comment: ""),for: .normal)
 
     }
     }
     
     @IBOutlet weak var OrLabel: UILabel! {
         didSet{
-            OrLabel.text = "OR".localized
+            OrLabel.text = "You don't have an account?".localized
             
         }
     }
@@ -59,6 +64,8 @@ class LoginViewController: UIViewController {
         override func viewDidLoad() {
         super.viewDidLoad()
             
+            
+            view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
             viewLogin.layer.shadowColor = UIColor.gray.cgColor
              viewLogin.layer.shadowOpacity = 1
              viewLogin.layer.shadowOffset = .zero

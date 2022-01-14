@@ -11,6 +11,12 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    
+    @IBOutlet weak var orLabelRegister: UILabel! {
+        didSet{
+            orLabelRegister.text = "You have an account ?".localized
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel! {
         didSet{
             nameLabel.text = "Name".localized
@@ -49,21 +55,16 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var eyePswword: UIButton!
+    
+    
+    @IBOutlet weak var eyeConfermPassword: UIButton!
+    
     @IBOutlet weak var Registerbutton: UIButton!{
         didSet{
             Registerbutton.setTitle(NSLocalizedString("Register", tableName: "Localizaple", comment: ""),for: .normal)
         }
     }
-    
-    @IBOutlet weak var orrLabel: UILabel!{
-        didSet{
-            orrLabel.text = "OR".localized
-        }
-    }
-    
-    
-    
-    
     @IBOutlet weak var loginButtton: UIButton!{
         didSet{
             loginButtton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for:  .normal)
@@ -72,8 +73,8 @@ class RegisterViewController: UIViewController {
     }
     @IBOutlet weak var userImageView: UIImageView!{
         didSet {
-            userImageView.layer.borderColor = UIColor.systemGreen.cgColor
-            userImageView.layer.borderWidth = 3.0
+            userImageView.layer.borderColor = UIColor.systemBrown.cgColor
+            userImageView.layer.borderWidth = 1.0
             userImageView.layer.cornerRadius = userImageView.bounds.height / 2
             userImageView.layer.masksToBounds = true
             userImageView.isUserInteractionEnabled = true
@@ -83,27 +84,47 @@ class RegisterViewController: UIViewController {
     }
 
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField! {
+        didSet {
+            nameTextField.placeholder = "Please enter your name".localized
+        }
+    }
     
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.placeholder = "Please enter your email".localized
+        }
+    }
     
     @IBOutlet weak var passwordTextField: UITextField!{
         didSet{
+            passwordTextField.placeholder = "Please enter your password".localized
             passwordTextField.isSecureTextEntry = true
         }
     }
     
     
     
+    @IBOutlet weak var idTextField: UITextField! {
+        didSet {
+            idTextField.placeholder = "Please enter your ID".localized
+        }
+    }
+    
     @IBOutlet weak var confirmPasswordTextField: UITextField!{
         didSet{
+            confirmPasswordTextField.placeholder = "Confirm password".localized
             confirmPasswordTextField.isSecureTextEntry = true
         }
     }
     
 
-    @IBOutlet weak var phoneNumberTextFiled: UITextField!
+    @IBOutlet weak var phoneNumberTextFiled: UITextField! {
+        didSet {
+            phoneNumberTextFiled.placeholder = "Please enter your phone number".localized
+        }
+    }
     
 
 
@@ -112,7 +133,48 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         imagePickerController.delegate = self
         // Do any additional setup after loading the view.
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+        passwordTextField.rightView = eyePswword
+                passwordTextField.rightViewMode = .whileEditing
+                
+                confirmPasswordTextField.rightView = eyeConfermPassword
+                confirmPasswordTextField.rightViewMode = .whileEditing
     }
+    
+    
+    
+    
+    @IBAction func eyePas(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry.toggle()
+        if passwordTextField.isSecureTextEntry {
+            if let image = UIImage(systemName: "eye.fill") {
+                sender.setImage(image, for: .normal)
+            }
+        } else {
+            if let image = UIImage(systemName: "eye.slash.fill"){
+                sender.setImage(image, for: .normal)
+            }
+        }
+
+    }
+    
+    
+    @IBAction func eyeConPas(_ sender: UIButton) {
+        
+        passwordTextField.isSecureTextEntry.toggle()
+        if confirmPasswordTextField.isSecureTextEntry {
+            if let image = UIImage(systemName: "eye.fill") {
+                sender.setImage(image, for: .normal)
+            }
+        } else {
+            if let image = UIImage(systemName: "eye.slash.fill"){
+                sender.setImage(image, for: .normal)
+            }
+        }
+
+    }
+    
+    
     
     
     @IBAction func handleRegister(_ sender: Any) {

@@ -1,6 +1,8 @@
 "MyDreamTrip" = "MyDreamTrip" ;
 "Login" = "Login" ;
 "OR" = "OR" ;
+"You don't have an account?" = "You don't have an account?" ;
+"You have an account ?" = "You have an account ?" ;
 "Register" =  "Register" ;
 "Email" = "Email" ;
 "Password" = "Password";
@@ -16,3 +18,4 @@
 "NameApartment" = "NameApartment" ;
 "Update Post" = "Update Post" ;
 "Add Post" = "Add Post" ;
+"Name" = "Name";

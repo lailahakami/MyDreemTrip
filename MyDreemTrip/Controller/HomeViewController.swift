@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     
    
+
     
     @IBOutlet weak var postsCollectionView: UICollectionView!
     
@@ -26,11 +27,25 @@ class HomeViewController: UIViewController {
     }
     
    
+    @IBOutlet weak var imageView: UIImageView!
     
-    
+    @IBOutlet weak var viewHeader: UIView!
+    {
+            didSet{
+                viewHeader.layer.borderColor = UIColor.tertiarySystemBackground.cgColor
+                viewHeader.layer.borderWidth = 0
+                viewHeader.layer.cornerRadius = 20
+                viewHeader.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+                viewHeader.layer.masksToBounds = true
+                viewHeader.isUserInteractionEnabled = true
+            }
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+
         getPosts()
         
         
