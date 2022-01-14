@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var LoginLabel: UIButton!{
         
             didSet {
-                LoginLabel.setTitle(NSLocalizedString("Register", tableName: "Localizaple", comment: ""),for: .normal)
+                LoginLabel.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for: .normal)
     
         }
     
@@ -67,7 +67,6 @@ class LoginViewController: UIViewController {
             
             view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
             viewLogin.layer.shadowColor = UIColor.gray.cgColor
-             viewLogin.layer.shadowOpacity = 1
              viewLogin.layer.shadowOffset = .zero
              viewLogin.layer.cornerRadius = 10
              viewLogin.layer.shadowPath = UIBezierPath(rect: viewLogin.bounds).cgPath
