@@ -13,10 +13,26 @@ class DetailsViewController: UIViewController {
     var selectedPostImage:UIImage?
     var selectedUserImage:UIImage?
     
+    @IBOutlet weak var priceOutlet: UILabel! {
+        didSet{
+            priceOutlet.text = "price".localized
+        }
+    }
+    @IBOutlet weak var titleOutlet: UILabel! {
+        didSet{
+            titleOutlet.text =  "Title".localized
+        }
+    }
+    @IBOutlet weak var descriptionOutlet: UILabel! {
+        didSet{
+            descriptionOutlet.text = "Description".localized
+            
+        }
+    }
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var imageUser: UIImageView! {
         didSet {
-            imageUser.layer.borderColor = UIColor.systemGreen.cgColor
+            imageUser.layer.borderColor = UIColor.systemBackground.cgColor
             imageUser.layer.borderWidth = 1.0
             imageUser.layer.cornerRadius = imageUser.bounds.height / 2
             imageUser.layer.masksToBounds = true

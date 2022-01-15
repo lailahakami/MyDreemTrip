@@ -67,13 +67,13 @@ class RegisterViewController: UIViewController {
     }
     @IBOutlet weak var loginButtton: UIButton!{
         didSet{
-            loginButtton.setTitle(NSLocalizedString("Login", tableName: "Localizaple", comment: ""),for:  .normal)
+            loginButtton.setTitle(NSLocalizedString("Join us", tableName: "Localizaple", comment: ""),for:  .normal)
         }
         
     }
     @IBOutlet weak var userImageView: UIImageView!{
         didSet {
-            userImageView.layer.borderColor = UIColor.systemBrown.cgColor
+            userImageView.layer.borderColor = UIColor.systemBackground.cgColor
             userImageView.layer.borderWidth = 1.0
             userImageView.layer.cornerRadius = userImageView.bounds.height / 2
             userImageView.layer.masksToBounds = true

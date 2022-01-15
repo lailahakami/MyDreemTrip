@@ -11,6 +11,8 @@ class PostCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCollectionView: UIImageView!
     
+    @IBOutlet weak var titleApartmentLabel: UILabel!
+    
     @IBOutlet weak var priceApartmentLabel: UILabel!
 //    {
 //        didSet{
@@ -47,9 +49,11 @@ class PostCell: UICollectionViewCell {
     }
     
     func configure(with post:Aperment) -> UICollectionViewCell {
-        nameApartment.text = post.user.name
+//        nameApartment.text = post.user.name
         priceApartmentLabel.text = post.price
         descriptionApartment.text = post.description
+        titleApartmentLabel.text = post.title
+        
 //        userImageView.loadImageUsingCache(with: post.user.imageUrl)
         imageCollectionView.loadImageUsingCache(with: post.imageUrl)
         return self

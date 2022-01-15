@@ -37,6 +37,14 @@ class LoginViewController: UIViewController {
       
     }
     
+    @IBOutlet weak var welcomeLabel: UILabel! {
+        didSet{
+            welcomeLabel.text = "Weclome".localized
+            
+        }
+      
+    }
+    
     @IBOutlet weak var LoginLabel: UIButton!{
         
             didSet {
@@ -81,6 +89,11 @@ class LoginViewController: UIViewController {
            let password = passwordTextField.text {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let error = error {
+                    Alert.showAlert(strTitle: "Error", strMessage: error.localizedDescription, viewController: self)
+                                                Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
+                    print("Registration Storage Error",error.localizedDescription)
+                }
                 if let _ = authResult {
                     if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController {
                         vc.modalPresentationStyle = .fullScreen
