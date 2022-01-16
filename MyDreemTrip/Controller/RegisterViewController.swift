@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!{
         didSet{
-            emailLabel.text = "Email".localized
+            emailLabel.text = "Email:".localized
         }
     }
     

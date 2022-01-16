@@ -59,9 +59,10 @@ class DetailsViewController: UIViewController {
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
             postTitleLabel.text = selectedPost.title
+            postPriceLabel.text = selectedPost.price
             postDescripionLabel.text = selectedPost.description
             postImageView.image = selectedImage
-            imageUser.image = selectedUserImage
+            imageUser.loadImageUsingCache(with: selectedPost.user.imageUrl)
             name.text = selectedPost.user.name
             
         }

@@ -15,7 +15,12 @@ class HomeViewController: UIViewController {
     
    
 
-    
+    @IBOutlet weak var whereOutlet: UIButton!
+    {
+        didSet{
+            whereOutlet.setTitle(NSLocalizedString("Where do you want to live?", tableName: "Localizaple", comment: ""),for: .normal)
+        }
+    }
     @IBOutlet weak var postsCollectionView: UICollectionView!
     
    {

@@ -9,6 +9,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var viewLogin: UIView!
     
     
+    @IBOutlet weak var eyePassowrd: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -25,7 +26,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel! {
         didSet{
-            emailLabel.text = "Email".localized
+            emailLabel.text = "Email:".localized
         }
     }
     
@@ -81,9 +82,26 @@ class LoginViewController: UIViewController {
              viewLogin.layer.shouldRasterize = true
              self.viewLogin.layer.cornerRadius = 10
         
+            passwordTextField.rightView = eyePassowrd
+                    passwordTextField.rightViewMode = .whileEditing
     
         }
         
+    
+    @IBAction func eyePas(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry.toggle()
+        if passwordTextField.isSecureTextEntry {
+            if let image = UIImage(systemName: "eye.fill") {
+                sender.setImage(image, for: .normal)
+            }
+        } else {
+            if let image = UIImage(systemName: "eye.slash.fill"){
+                sender.setImage(image, for: .normal)
+            }
+        }
+
+    }
+    
     @IBAction func handleLogin(_ sender: Any) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {
